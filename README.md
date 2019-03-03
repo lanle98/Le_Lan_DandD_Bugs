@@ -1,1 +1,3 @@
-# Le_Lan_DandD_Bugs
+# This is a repo for images animations
+
+this is my homework
