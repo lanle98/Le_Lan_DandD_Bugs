@@ -56,21 +56,7 @@
 
 			let piece = e.dataTransfer.getData("text/plain");
 			
-
-
-			//bug fix for dropzones
-			
-			if(zone.innerHTML == ""){
 				e.target.appendChild(document.querySelector(`#${piece}`));
-			console.log(zone)
-			}
-			else
-			{
-				e.target.removeChild(document.querySelector(`#${piece}`));
-			console.log(zone)
-			}
-			
-			
 		})
 	});
 
@@ -100,7 +86,13 @@
 		createPuzzlePieces(this.dataset.puzzleref); //'this' is puzzleSelectors
 
 
-		
+		//fixed bug for reset puzzles
+		dropzones.forEach((e) => {
+			while(e.firstChild)
+			{
+				e.removeChild(e.firstChild)
+			}
+		})
 
 
 		
