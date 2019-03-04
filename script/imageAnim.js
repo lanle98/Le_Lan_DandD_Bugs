@@ -57,7 +57,7 @@
 			let piece = e.dataTransfer.getData("text/plain");
 			
 
-
+			//bug fix for dropzones
 			if(zone.innerHTML == ""){
 				e.target.appendChild(document.querySelector(`#${piece}`));
 				console.log(zone)
