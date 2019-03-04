@@ -56,7 +56,21 @@
 
 			let piece = e.dataTransfer.getData("text/plain");
 			
+
+
+			if(zone.innerHTML == ""){
 				e.target.appendChild(document.querySelector(`#${piece}`));
+				console.log(zone)
+			}
+
+			else
+			{
+				e.target.removeChild(document.querySelector(`#${piece}`));
+			console.log(zone)
+			}
+			
+			
+			
 		})
 	});
 
